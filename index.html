@@ -3,15 +3,275 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/zzv6xbo.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Assignment 3 - Flexbox</title>
+
+    <script>
+      function toggleMenu() {
+        let mobile_nav = document.getElementById("mobile_nav");
+        let menu_button = document.getElementById("menu_button");
+        let menu_white = document.getElementById("menu_white");
+        let menu_black = document.getElementById("menu_black");
+        if (mobile_nav.style.display === "flex") {
+          mobile_nav.style.display = "none";
+          menu_black.style.display = "none";
+          menu_white.style.display = "initial";
+          menu_button.style.background = "none";
+        } else {
+          mobile_nav.style.display = "flex";
+          menu_black.style.display = "initial";
+          menu_white.style.display = "none";
+          menu_button.style.backgroundColor = "#fffafa";
+        }
+      }
+    </script>
   </head>
   <body>
     <header>
-      <nav></nav>
+      <a href="#"><h1>Alice in Chains</h1></a>
+      <div id="mobile_nav_container">
+        <button id="menu_button" onclick="toggleMenu()">
+          <img
+            id="menu_white"
+            src="images/menu_white.png"
+            alt="Hamburger menu icon"
+            title="menu"
+            width="512"
+            height="512"
+          />
+          <img
+            id="menu_black"
+            src="images/menu.png"
+            alt="Hamburger menu icon"
+            title="menu"
+            width="512"
+            height="512"
+          />
+        </button>
+        <section id="mobile_nav">
+          <a href="#" id="selected_item_mobile">Home</a>
+          <a href="https://aliceinchains.com/">Website</a>
+          <a href="https://en.wikipedia.org/wiki/Alice_in_Chains">Wikipedia</a>
+          <a
+            href="https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL?si=Zt297jz-SL-2ZHhMH_9wrg"
+            >YouTube</a
+          >
+          <a href="">Spotify</a>
+        </section>
+      </div>
+      <nav>
+        <a href="#" id="selected_item">Home</a>
+        <a href="https://aliceinchains.com/">Website</a>
+        <a href="https://en.wikipedia.org/wiki/Alice_in_Chains">Wikipedia</a>
+        <a
+          href="https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL?si=Zt297jz-SL-2ZHhMH_9wrg"
+          >YouTube</a
+        >
+        <a href="">Spotify</a>
+      </nav>
     </header>
     <main>
-      <aside></aside>
-      <section></section>
+      <aside>
+        <h2>Albums</h2>
+        <section class="album">
+          <img src="images/facelift.jpg" height="1000" width="1000" />
+          <h3>Facelift</h3>
+          <p>
+            Facelift is the debut studio album by the American rock band Alice
+            in Chains, released by Columbia Records on August 21, 1990. Facelift
+            became the first album from the grunge movement to be certified gold
+            on September 11, 1991. The album peaked at No. 42 on the Billboard
+            200 chart, was certified platinum and has gone on to be certified
+            double-platinum by the RIAA for shipments of two million copies in
+            the United States.
+          </p>
+        </section>
+        <section class="album">
+          <img src="images/sap.jpg" height="1000" width="1000" />
+          <h3>Sap</h3>
+          <p>
+            Sap is the second studio EP by the American rock band Alice in
+            Chains, released on February 4, 1992, through Columbia Records. Sap
+            is mostly acoustic and marks the first time that guitarist Jerry
+            Cantrell sings lead vocals in an Alice in Chains release, with the
+            song "Brother". On January 14, 1994, Sap was certified gold by the
+            RIAA for the sale of more than 500,000 copies.
+          </p>
+        </section>
+        <section class="album">
+          <img src="images/dirt.jpg" height="1000" width="1000" />
+          <h3>Dirt</h3>
+          <p>
+            Dirt is the second studio album by the American rock band Alice in
+            Chains, released on September 29, 1992, through Columbia Records.
+            Rolling Stone listed the album at No. 26 on its list of the 100
+            Greatest Metal Albums of All Time. Dirt was included in the 2005
+            book 1001 Albums You Must Hear Before You Die. It was voted
+            "Kerrang! Critic's Choice Album of the Year". Guitar World named
+            Dirt as the best guitar album of 1992. Loudwire named it as one of
+            the best Metal albums of the 1990s, and Rolling Stone ranked it at
+            No. 6 on its list of "50 Greatest Grunge Albums" in 2019. It has
+            since been certified four-times platinum by the RIAA and gone on to
+            sell five million copies worldwide, making Dirt the band's highest
+            selling album to date.
+          </p>
+        </section>
+        <section class="album">
+          <img src="images/jar_of_flies.jpg" height="1000" width="1000" />
+          <h3>Jar of Flies</h3>
+          <p>
+            Jar of Flies is the third studio EP by the American rock band Alice
+            in Chains, released on January 25, 1994, through Columbia Records.
+            This is Alice in Chains' second acoustic EP, preceded by 1992's Sap,
+            and it is the first EP in music history to debut at No. 1 on the
+            Billboard 200 chart, with the first week sales exceeding 141,000
+            copies in the United States.
+          </p>
+        </section>
+        <section class="album">
+          <img src="images/alice_in_chains.jpg" height="1000" width="1000" />
+          <h3>Alice in Chains</h3>
+          <p>
+            Alice in Chains (occasionally informally referred to as The Dog
+            Album, The Dog Record, and Tripod) is the self-titled third studio
+            album by the American rock band Alice in Chains. It was released on
+            November 7, 1995 through Columbia Records, and was the follow-up to
+            the highly successful Dirt (1992). This is the band's first
+            full-length studio album to feature bassist Mike Inez; their last
+            album to feature original lead vocalist Layne Staley, who died in
+            2002; and their last album to be released on Columbia Records. The
+            album debuted at No. 1 on the Billboard 200 and stayed on the chart
+            for 46 weeks. The tracks "Grind", "Heaven Beside You" and "Again"
+            were released as singles. "Grind" and "Again" were nominated for the
+            Grammy Award for Best Hard Rock Performance. The album received
+            double platinum certification from the RIAA and has sold over three
+            million copies worldwide.
+          </p>
+        </section>
+        <section class="album">
+          <img src="images/unplugged.jpg" height="1000" width="1000" />
+          <h3>Unplugged</h3>
+          <p>
+            Unplugged is a live album and DVD by the American rock band Alice in
+            Chains, released on July 30, 1996 by Columbia Records. It was
+            recorded on April 10, 1996 at the Brooklyn Academy of Music's
+            Majestic Theatre for the television series MTV Unplugged. The show
+            was directed by Joe Perota and first aired on MTV on May 28, 1996.
+            The MTV Unplugged was Alice in Chains' first concert in two and a
+            half years, and contains live, acoustic versions of the band's
+            biggest hits and lesser-known songs. The album debuted at No. 3 on
+            the Billboard 200 chart, and has been certified platinum by the
+            RIAA.
+          </p>
+        </section>
+        <section class="album">
+          <img
+            src="images/black_gives_way_to_blue.jpg"
+            height="1000"
+            width="1000"
+          />
+          <h3>Black Gives Way to Blue</h3>
+          <p>
+            Black Gives Way to Blue is the fourth studio album by the American
+            rock band Alice in Chains, released on September 29, 2009, on the
+            17th anniversary of the release of their second album, Dirt. It is
+            their first record without original lead singer Layne Staley, who
+            died in 2002, and their first album with new vocalist and rhythm
+            guitarist William DuVall sharing vocal duties with lead
+            guitarist/vocalist Jerry Cantrell, who sings lead vocals on most of
+            the songs. The span of nearly fourteen years between the self-titled
+            album and Black Gives Way to Blue, marks the longest gap between
+            studio albums in Alice in Chains' career. The album debuted at No. 5
+            on the Billboard 200, and was certified gold by the RIAA on May 26,
+            2010, with shipments exceeding 500,000 copies in the U.S. and over 1
+            million copies sold worldwide.
+          </p>
+        </section>
+        <section class="album">
+          <img
+            src="images/the_devil_put_dinosaurs_here.jpg"
+            height="1000"
+            width="1000"
+          />
+          <h3>The Devil Put Dinosaurs Here</h3>
+          <p>
+            The Devil Put Dinosaurs Here is the fifth studio album by the
+            American rock band Alice in Chains, released on May 28, 2013 through
+            Capitol Records (and the band's final album released by the label).
+            Peaking at No. 2 on the Billboard 200 chart and at No. 1 on the Top
+            Rock Albums chart, the album was well received by music critics, and
+            "Hollow", "Stone", "Voices" were released as singles to promote the
+            album.
+          </p>
+        </section>
+        <section class="album">
+          <img src="images/rainier_fog.jpg" height="1000" width="1000" />
+          <h3>Rainier Fog</h3>
+          <p>
+            Rainier Fog is the sixth studio album by American rock band Alice in
+            Chains, released on August 24, 2018, through BMG, the band's first
+            release on the label. The title was inspired by Mount Rainier, a
+            volcano that overlooks the Seattle-Tacoma metropolitan area, and the
+            title track is a tribute to the Seattle music scene. This is the
+            band's third album with William DuVall sharing lead vocals with
+            Jerry Cantrell, and the first Alice in Chains album in 22 years to
+            be recorded in their hometown of Seattle. Rainier Fog debuted at No.
+            12 on the Billboard 200 chart. It also debuted at No. 1 on
+            Billboard's Top Rock Albums, Alternative Albums and Hard Rock Albums
+            charts. The album became Alice in Chains' first top 10 in the UK,
+            peaking at No. 9.
+          </p>
+        </section>
+      </aside>
+      <hr />
+      <section id="history">
+        <img src="images/alice-in-chains-mpop.jpg" width="1800" height="1200" />
+        <h2>History</h2>
+        <p>
+          Alice in Chains (often abbreviated as AIC) is an American rock band
+          from Seattle, Washington, formed in 1987 by guitarist and vocalist
+          Jerry Cantrell and drummer Sean Kinney, who later recruited bassist
+          Mike Starr and lead vocalist Layne Staley. Starr was replaced by Mike
+          Inez in 1993. William DuVall joined the band in 2006 as co-lead
+          vocalist and rhythm guitarist, replacing Staley, who died in 2002. The
+          band took its name from Staley's previous group, the glam metal band
+          Alice N' Chains.
+        </p>
+        <p>
+          Often associated with grunge music, Alice in Chains' sound
+          incorporates heavy metal elements. The band is known for its
+          distinctive vocal style, which often included the harmonized vocals
+          between Staley and Cantrell (and later Cantrell and DuVall). Cantrell
+          started to sing lead vocals on the 1992 acoustic EP Sap, and his role
+          continued to grow in the following albums, making Alice in Chains a
+          two-vocal band.
+        </p>
+        <p>
+          Alice in Chains rose to international fame as part of the grunge
+          movement of the early 1990s, along with other Seattle bands such as
+          Nirvana, Pearl Jam, and Soundgarden. They achieved success during the
+          era with the albums Facelift (1990), Dirt (1992), Alice in Chains
+          (1995), as well as the EP Jar of Flies (1994). Although never
+          officially disbanding, Alice in Chains was plagued by extended
+          inactivity from 1996 onward, due to Staley's substance abuse, which
+          resulted in his death in 2002. The band regrouped in 2006, with DuVall
+          taking over as lead vocalist full-time, and they have since released
+          three more albums: Black Gives Way to Blue (2009), The Devil Put
+          Dinosaurs Here (2013), and Rainier Fog (2018).
+        </p>
+        <p>
+          Alice in Chains have sold over 30 million records worldwide, and over
+          14 million records in the US alone. The band has had 18 Top 10 songs
+          on Billboard's Mainstream Rock Tracks chart, 5 No. 1 hits, and
+          received 11 Grammy Award nominations. The band was ranked number 34 on
+          VH1's 100 Greatest Artists of Hard Rock and was ranked as the 15th
+          greatest live band by Hit Parader. Since its formation, Alice in
+          Chains has released six studio albums, three EPs, three live albums,
+          four compilations, two DVDs, 43 music videos, and 32 singles.
+        </p>
+        <img src="images/aic_30th_anniv.jpg" width="1589" height="1059" />
+      </section>
     </main>
   </body>
 </html>
