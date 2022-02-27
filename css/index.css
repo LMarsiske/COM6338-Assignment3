@@ -61,7 +61,7 @@ tr,
 th,
 td,
 article,
-aside,
+#history,
 canvas,
 details,
 embed,
@@ -176,12 +176,19 @@ nav {
   display: none;
 }
 
+#wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 main {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: 5% auto;
+  margin: 5% 0;
 }
 
 h2 {
@@ -211,10 +218,13 @@ hr {
   width: 100%;
   height: auto;
 }
+footer p {
+  text-align: center;
+}
 
 @media (min-width: 576px) {
   main {
-    margin: 2.5% auto;
+    margin: 2.5% 0;
   }
 }
 
@@ -263,15 +273,17 @@ hr {
     display: none;
   }
 
-  aside {
-    width: 40%;
+  #history {
+    width: 30%;
   }
 
-  #history {
-    width: 58%;
+  #albums {
+    width: 68%;
   }
 }
 
+@media (min-width: 1200px) {
+}
 /* 
     576
     768
